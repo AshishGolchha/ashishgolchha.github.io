@@ -643,8 +643,43 @@ body {
 }
 
 .btn.primary {
-  background: #0d59f2;
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #0d59f2, #2563eb);
   color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* Glow */
+.btn.primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.btn.primary:hover::before {
+  transform: translateX(100%);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(13, 89, 242, 0.5);
 }
 
 .btn.secondary {
@@ -843,6 +878,209 @@ body {
 .navbar nav a.active {
   color: #ffffff;
   font-weight: 600;
+}
+
+/* CONTACT */
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 120px 20px 60px;
+}
+
+.contact-header h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  color: #9aa4b2;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* CARDS */
+.contact-card {
+  background: rgba(18, 18, 22, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.4s;
+}
+
+.contact-card:hover {
+  border-color: rgba(13, 89, 242, 0.4);
+  box-shadow: 0 0 30px rgba(13, 89, 242, 0.15);
+}
+
+/* SOCIAL LINKS */
+.social-link {
+  display: block;
+  margin-top: 16px;
+  color: #cbd5e1;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.social-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #0d59f2;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  color: white;
+  transform: translateX(6px);
+}
+
+.social-link:hover::after {
+  width: 100%;
+}
+
+/* FORM */
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 14px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 14px;
+  transition: 0.3s;
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+  outline: none;
+  border-color: #0d59f2;
+  box-shadow: 0 0 12px rgba(13, 89, 242, 0.3);
+}
+
+.form-status {
+  margin-top: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-status.success {
+  color: #22c55e;
+}
+
+/* Error */
+.form-status.error {
+  color: #ef4444;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  padding: 14px 20px;
+  border-radius: 10px;
+  color: #22c55e;
+  animation: fadeIn 0.4s ease;
+}
+
+/* SOCIAL LINK LAYOUT */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: all 0.25s ease;
+}
+
+/* ICON STYLE */
+.social-link i {
+  width: 18px;
+  height: 18px;
+  stroke: #0d59f2;
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.social-link:hover {
+  transform: translateX(6px);
+  color: white;
+}
+
+.social-link:hover i {
+  stroke: #3b82f6;
+}
+
+/* LOCATION NON CLICKABLE */
+.location-text {
+  cursor: default;
+}
+
+/* EXTRA SOCIAL SECTION */
+.social-extra {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* AVAILABILITY */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: rgba(13, 89, 242, 0.15);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  width: fit-content;
+}
+
+/* PULSE DOT */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #3b82f6;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #3b82f6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 1024px) {
