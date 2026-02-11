@@ -26,58 +26,112 @@
     </header>
 
     <section class="page resume">
-    <div class="resume-wrapper">
 
-        <div class="resume-header">
-        <h1>Resume</h1>
-        <a class="primary-btn" href="assets/resume.pdf" target="_blank" download>
-            Download Resume
-        </a>
-        </div>
+        <div class="resume-wrapper tactile">
 
-        <div class="resume-grid">
+            <!-- HEADER -->
+            <div class="resume-header tactile-header">
 
-        <div class="resume-card">
-            <h2>Experience</h2>
-            <h3>Backend Developer Intern</h3>
-            <span>Axilivo Technologies · 2025 – Present</span>
-            <p>
-            Working on backend development using <b>Python</b> and <b>Flask</b>.
-            Building REST APIs, handling authentication, database integration,
-            debugging, and deployment workflows.
-            </p>
-        </div>
-
-        <div class="resume-card">
-            <h2>Key Projects</h2>
-            <ul>
-            <li><b>PunchDesk</b> — Attendance management backend using Flask & JWT.</li>
-            <li><b>AI PDF Chat Assistant</b> — PDF Q&A with embeddings & Gemini.</li>
-            <li><b>Archery Management System</b> — Multi-city competition platform.</li>
-            </ul>
-        </div>
-
-        <div class="resume-card">
-            <h2>Education</h2>
-            <p>
-            <b>B.Com (Bachelor of Commerce)</b><br />
-            Shri Jain P.G. College<br />
-            2023 – Present
-            </p>
-        </div>
-
-        <div class="resume-card">
-            <h2>Skills</h2>
-            <div class="resume-skills">
-            <span>Python</span><span>Flask</span>
-            <span>REST APIs</span><span>JWT</span>
-            <span>MySQL</span><span>Tailwind CSS</span>
-            <span>Git & GitHub</span><span>OOP</span>
+            <div>
+                <h1 class="tactile-title">Resume</h1>
+                <p class="tactile-sub">
+                Experience • Projects • Education • Skills
+                </p>
             </div>
-        </div>
+
+            <a class="tactile-download" 
+                href="assets/resume.pdf" 
+                target="_blank" 
+                download>
+
+                <i data-lucide="download"></i>
+                Download CV
+
+            </a>
+
+            </div>
+
+            <!-- GRID -->
+            <div class="resume-grid tactile-grid">
+
+            <!-- EXPERIENCE -->
+            <div class="resume-card tactile-card card-raised hover-float">
+
+                <div class="card-head">
+                <i data-lucide="briefcase"></i>
+                <h2>Experience</h2>
+                </div>
+
+                <h3>Backend Developer Intern</h3>
+                <span>Axilivo Technologies · 2025 – Present</span>
+
+                <p>
+                Working on backend development using <b>Python</b> and <b>Flask</b>.
+                Building REST APIs, authentication systems, database integrations,
+                debugging, and deployment workflows.
+                </p>
+
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="resume-card tactile-card card-inset hover-float">
+
+                <div class="card-head">
+                <i data-lucide="folder-kanban"></i>
+                <h2>Key Projects</h2>
+                </div>
+
+                <ul>
+                <li><b>PunchDesk</b> — Attendance backend using Flask & JWT.</li>
+                <li><b>AI PDF Chat Assistant</b> — Embeddings + Gemini Q&A.</li>
+                <li><b>Archery Management System</b> — Competition platform.</li>
+                </ul>
+
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="resume-card tactile-card card-inset hover-float">
+
+                <div class="card-head">
+                <i data-lucide="graduation-cap"></i>
+                <h2>Education</h2>
+                </div>
+
+                <p>
+                <b>B.Com (Bachelor of Commerce)</b><br />
+                Shri Jain P.G. College<br />
+                2023 – Present
+                </p>
+
+            </div>
+
+            <!-- SKILLS -->
+            <div class="resume-card tactile-card card-raised hover-float">
+
+                <div class="card-head">
+                <i data-lucide="cpu"></i>
+                <h2>Skills</h2>
+                </div>
+
+                <div class="tactile-skills">
+
+                <span>Python</span>
+                <span>Flask</span>
+                <span>REST APIs</span>
+                <span>JWT</span>
+                <span>MySQL</span>
+                <span>Tailwind CSS</span>
+                <span>Git & GitHub</span>
+                <span>OOP</span>
+
+                </div>
+
+            </div>
+
+            </div>
 
         </div>
-    </div>
+
     </section>
 
     <footer class="site-footer">
