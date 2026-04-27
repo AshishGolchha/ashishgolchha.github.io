@@ -2016,6 +2016,23 @@ body {
   box-shadow: 0 14px 30px rgba(13, 89, 242, 0.5);
 }
 
+.social-link {
+  color: #fff; /* force white text + icons */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link i,
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  color: inherit;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
 @media (max-width: 1024px) {
   .contact-page {
     padding: 118px 28px 60px;
@@ -2034,4 +2051,10 @@ body {
   .contact-page .contact-card {
     padding: 24px 20px;
   }
+}
+
+.contact-page .social-link i,
+.contact-page .social-link svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
